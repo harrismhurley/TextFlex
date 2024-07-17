@@ -1,144 +1,88 @@
-# 19 Progressive Web Applications (PWA): Text Editor
+# TextFlex
 
-## Your Task
+    
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+## Description
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+J.A.T.E. is a modern web application designed for developers who need a versatile tool for creating and managing notes or code snippets. Whether online or offline, J.A.T.E. ensures that your content is reliably stored and accessible, making it ideal for capturing ideas and saving code for later use.
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+## Deployed Application URL
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+[TextFlex](https://textflex.onrender.com/)
 
-You will deploy this full-stack application to Render using the [Render Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/render/render-deployment-guide).
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [Features](#features)
+* [Dependencies](#dependencies)
+* [Screenshots](#screenshots)
+* [How to Contribute](#how-to-contribute)
+* [Tests](#tests)
+* [License](#license)
 
-**Important**: Make sure your submission includes the `.npmrc` file in this starter code.  This will ensure your application will deploy properly to Render.
+## Installation
+To install this application, follow these steps:
 
-## User Story
+1. Clone the repository to your local machine using the command: `git@github.com:harrismhurley/TextFlex.git`
+2. Navigate into the project directory
+3. Install dependencies using npm: 'npm i'
 
-```md
-AS A developer
-I WANT to create notes or code snippets with or without an internet connection
-SO THAT I can reliably retrieve them for later use
-```
+## Usage
+To use this application locally, follow these steps:
 
-## Acceptance Criteria
+1. Start application and install remaining dependencies with 'npm run start'
+2. Open your web browser and navigate to `http://localhost:3000`
+3. Register a new user account or log in with existing credentials
+4. Explore existing posts, add new posts, update or delete posts as needed
+5. Engage with posts by adding comments.
 
-```md
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Render
-THEN I should have proper build scripts for a webpack application
-```
+## Credits
 
-## Mock-Up
+N/A
 
-The following animation demonstrates the application functionality:
+## Features
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+- Offline Capability: Create and save notes or code snippets even without an internet connection.
+- IndexedDB Integration: Utilizes IndexedDB for immediate local storage upon application initialization.
+- Webpack Bundling: JavaScript files are bundled using Webpack for efficient application deployment.
+- Service Worker: Includes a service worker generated with Workbox, enabling offline functionality and asset caching.
+- Installable PWA: Users can install the application on their devices, allowing access directly from the desktop.
+- Deployment Ready: Includes build scripts optimized for deployment to Render, ensuring seamless integration with cloud hosting.
 
-The following image shows the application's `manifest.json` file:
+## Dependencies
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
+- express 4.17.1
+- if-env 1.0.4
+- @babel/core 7.15.0
+- @babel/plugin-proposal-object-rest-spread 7.20.7
+- @babel/plugin-transform-runtime 7.15.0
+- @babel/preset-env 7.15.0
+- @babel/runtime 7.15.3
+- babel-loader 8.2.2
+- css-loader 6.2.0
+- html-webpack-plugin 5.3.2
+- http-server 0.11.1
+- style-loader 3.2.1
+- webpack 5.51.1
+- webpack-cli 4.8.0
+- webpack-dev-server 4.0.0
+- webpack-pwa-manifest 4.3.0
+- workbox-webpack-plugin 6.2.4
 
-The following image shows the application's registered service worker:
+## Screenshots
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+![Demo](./Assets/demo.png)
+![Manifest](./Assets/manifest.png)
+![Storage](./Assets/IDBStorage.png)
+![Service Worker](./Assets/serviceWorker.png)
 
-The following image shows the application's IndexedDB storage:
+## How to Contribute
+If you would like to contribute you can contact me [Via Email](mailto:harrismhurley@icloud.com?subject=[GitHub]%20Dev%20Connect) or visit [github](https://github.com/harrismhurley).
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+## Tests
 
-## Grading Requirements
+N/A
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
-
-  * The application works without an internet connection
-
-  * Automatically saves content inside the text editor when the DOM window is unfocused
-
-  * Bundled with webpack
-
-  * Create a service worker with workbox that Caches static assets
-
-  * The application should use babel in order to use async / await
-
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
-
-  * Can be installed as a Progressive Web Application
-
-### Deployment: 32%
-
-* Application deployed to Render at live URL with build scripts
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## License 
+This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license.
